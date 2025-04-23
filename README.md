@@ -1,5 +1,20 @@
 # Automated-Traffic-Monitoring-System
-This repository contains the code for a vehicle flow automatic detection system using YOLOv5, including resnet50-based weather recognition capabilities.
+This repository contains the code for a vehicle flow automatic detection system using YOLOv5, incorporating a weather recognition function based on ResNet50.
+
+The project implements basic functionalities including real-time detection of different vehicle types and real-time vehicle counts in both north and south directions. It features a comprehensive GUI that allows manual setting of maximum vehicle flow thresholds for different directions, issuing warnings when thresholds are exceeded. Additionally, the project can automatically adjust thresholds based on recognized weather conditions (maximum vehicle flow: sunny > rainy > snowy). Lastly, there is an incomplete function for detecting illegal lane changes across solid lines.
+
+## Highlights
+### Automatic traffic flow threshold based on weather detection
+![wechat_2025-04-23_214043_266](https://github.com/user-attachments/assets/e967fc98-02f5-4ad1-9fcb-21f519e0df89)
+
+### Good night detection results
+![image](https://github.com/user-attachments/assets/d09ab67b-f49d-4a56-927c-2beaa1bb4167)
+
+### Demo
+
+https://github.com/user-attachments/assets/927cac7a-90dc-4a2b-97a2-5f03d8f07c36
+
+
 
 ## Instructions
 
@@ -23,8 +38,10 @@ This repository contains the code for a vehicle flow automatic detection system 
 
 ### Running the Code
 
-1.  **Set the working directory:** Navigate to the root directory of the project (`cd Automated-Traffic-Monitoring-System`).
-
+1.  **Set the working directory:** Navigate to the root directory of the project.
+    ```bash
+    cd Automated-Traffic-Monitoring-System
+    ```
 2.  **Preprocess Training and Validation Data:**
     * Run `python VOC/maketxt.py`
         * This script splits the dataset into training and validation sets and generates `.txt` files containing the respective image IDs in the `VOC/txt_dataset/` folder.
@@ -46,7 +63,7 @@ This repository contains the code for a vehicle flow automatic detection system 
     > * Uncomment lines 252 to 257 in `main.py`.
     > * Modify the ROI settings defined in lines 33 to 36 of `main.py` according to your video's perspective.
 
-## Areas for Improvement
+## Potential Improvement
 
 * **Weather Recognition Model:** Due to time constraints, an open-source weather recognition model was used directly. This model was not trained on our specific traffic dataset. Consequently, if a video frame primarily shows the road without distinct weather features (like clear sky, rain, snow), the weather prediction might be inaccurate. Training the provided weather model architecture (`model.py`) using our traffic dataset annotated with weather labels would resolve this.
 * **Kalman Filter Speed Estimation:** The current Kalman filter implementation tracks objects but cannot accurately estimate their real-world speed.
