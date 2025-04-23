@@ -23,7 +23,7 @@ This repository contains the code for a vehicle flow automatic detection system 
 
 ### Running the Code
 
-1.  **Set the working directory:** Navigate to the root directory of the project (`Automated-Traffic-Monitoring-System/`).
+1.  **Set the working directory:** Navigate to the root directory of the project (`cd Automated-Traffic-Monitoring-System`).
 
 2.  **Preprocess Training and Validation Data:**
     * Run `python VOC/maketxt.py`
