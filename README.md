@@ -16,12 +16,14 @@ This repository contains the code for a vehicle flow automatic detection system 
     * Place the images from the dataset in the `./VOC/images/` folder.
     * Place the label `.xml` files in the `./VOC/xml_dataset/` folder.
     * Ensure the filenames match the expected format.
-
+* **Preparing Model Weight:**
+    * Download model weight: [Link](https://drive.google.com/file/d/1kTxbhnib5hB8NNDqd9b-E1PM-6iecrpP/view?usp=sharing)
+    * Extract both folders from the zip file to the project's root directory.   
 ---
 
 ### Running the Code
 
-1.  **Set the working directory:** Navigate to the root directory of the project (`yolov5-master/`).
+1.  **Set the working directory:** Navigate to the root directory of the project (`Automated-Traffic-Monitoring-System/`).
 
 2.  **Preprocess Training and Validation Data:**
     * Run `python VOC/maketxt.py`
